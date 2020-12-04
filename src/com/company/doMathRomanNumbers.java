@@ -2,7 +2,7 @@ package com.company;
 
 public class doMathRomanNumbers {
 
-    public static void doMathRomanNumbers(String str) throws Exception {
+    public static void doMathRomanNumbers(String str){
         int result;
         String[] numbers;
         String str2 = str.replaceAll("\\s+", "");
@@ -10,8 +10,6 @@ public class doMathRomanNumbers {
         {
             numbers = str2.split("[+]");
             int[] RomanNumbers = convertRomanNumbersToArabian (numbers);
-            if (RomanNumbers [0] > 10 | RomanNumbers [0] < 0) throw new Exception("Numbers 1 must be less than 10 and greater than 0");
-            if (RomanNumbers [1] > 10 | RomanNumbers [1] < 0) throw new Exception("Numbers 2 must be less than 10 and greater than 0");
             result = RomanNumbers [0] + RomanNumbers [1];
             printRomanNumbers (result);
         }
@@ -19,8 +17,6 @@ public class doMathRomanNumbers {
         {
             numbers = str2.split("[-]");
             int[] RomanNumbers = convertRomanNumbersToArabian(numbers);
-            if (RomanNumbers [0] > 10 | RomanNumbers [0] < 0) throw new Exception("Numbers 1 must be less than 10 and greater than 0");
-            if (RomanNumbers [1] > 10 | RomanNumbers [1] < 0) throw new Exception("Numbers 2 must be less than 10 and greater than 0");
             result = RomanNumbers [0] - RomanNumbers [1];
             printRomanNumbers (result);
         }
@@ -28,8 +24,6 @@ public class doMathRomanNumbers {
         {
             numbers = str2.split("[/]");
             int[] RomanNumbers = convertRomanNumbersToArabian(numbers);
-            if (RomanNumbers [0] > 10 | RomanNumbers [0] < 0) throw new Exception("Numbers 1 must be less than 10 and greater than 0");
-            if (RomanNumbers [1] > 10 | RomanNumbers [1] < 0) throw new Exception("Numbers 2 must be less than 10 and greater than 0");
             result = RomanNumbers [0] / RomanNumbers [1];
             printRomanNumbers (result);
         }
@@ -37,8 +31,6 @@ public class doMathRomanNumbers {
         {
             numbers = str2.split("[*]");
             int[] RomanNumbers = convertRomanNumbersToArabian(numbers);
-            if (RomanNumbers [0] > 10 | RomanNumbers [0] < 0) throw new Exception("Numbers 1 must be less than 10 and greater than 0");
-            if (RomanNumbers [1] > 10 | RomanNumbers [1] < 0) throw new Exception("Numbers 2 must be less than 10 and greater than 0");
             result = RomanNumbers [0] * RomanNumbers [1];
             printRomanNumbers (result);
         }
